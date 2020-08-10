@@ -1,37 +1,52 @@
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin: 1em;
-    padding: 0;
+    background-color: #b0c4de;
+}
+
+.container {
+    position: relative;
+    margin: 0.1em;
 }
 
 h1 {
     text-align: center;
     font-size: 175%;
+    margin: 1em;
 }
 
+.row {
+    width: 100%;
+}
 
-section {
+.section {
     position: relative;
-    overflow: auto;
-    height: 160px;
+    overflow: hidden;
+    margin: 0.5em;
+    padding: 1em;
+    border: 1px black solid;
 }
 
-section>div {
+
+  
+.section-title {
     font-size: 125%;
     position: absolute;
     float: right;
     top: 0;
     right: 0;
+    border-left: 1px black solid;
+    border-bottom: 1px black solid;
+    padding: 5px 25px;
 }
 
-p {
-    font-size: 100%;
-    padding-top: 35px;
-    margin: 0;
+.section p {
+    padding-top: 30px;
+    text-align: justify;
 }
 
 #section1 {
@@ -46,49 +61,42 @@ p {
     background-color: lightsalmon;
 }
 
+#title1 {
+    background-color: yellow;
+}
 
-#div1{background-color: yellow; padding: 5px 25px; border: 1px black solid;}
-#div2{background-color: lightcyan; padding: 5px 25px; border: 1px black solid;}
-#div3{background-color: lightblue; padding: 5px 25px; border: 1px black solid;}
+#title2 {
+    background-color: lightcyan;
+}
 
-@media (max-width:767px){
-    section{
-        width: 100%;
+#title3 {
+    background-color: lightblue;
+}
+
+@media (min-width: 992px) {
+    .col-lg-4 {
         float: left;
-        margin: 0.5em 0;        
-        padding: 0.7em;
-        border: 1px black solid;
+        width: 33.3%;
     }
 }
 
-@media (min-width:768px) and (max-width:991px){
-    section{
-        padding: 0.7em;
-        border: 1px black solid;
-    }
-    #section1 {
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-md-6 {
+        width: 50%;
         float: left;
-        width: 49% ;
-        margin-bottom: 15px;
+        display: block;
     }
-    
-    #section2 {
-        float: right;
-        width: 49%;
-    }
-    
-    #section3 {
-        clear: both;
+    .col-md-12 {
         width: 100%;
+        float: left;
+        display: block;
     }
 }
 
-@media (min-width:992px) {
-    section {
-        width: 32.3%;
+@media (max-width: 767px) {
+    .col-sm-12 {
+        width: 100%;
         float: left;
-        margin: 0 0.3rem;
-        padding: 0.7em;
-        border: 1px black solid;
+        display: block;
     }
 }
