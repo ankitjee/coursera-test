@@ -17,6 +17,7 @@ h1 {
 section {
     position: relative;
     overflow: auto;
+    height: 160px;
 }
 
 section>div {
